@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/*내거*/
 *,
 *::before,
 *::after {
@@ -9,6 +9,10 @@
 }
 ul {
     list-style: none;
+}
+h1 {
+    text-align: center;
+    margin: 1rem 0;
 }
 .row ul {
     max-width: 600px;
@@ -33,7 +37,7 @@ ul {
     transform: translate(-50%, -50%);
     overflow: hidden;
     border: 5px solid white;
-    box-shadow: 10px 5px 5px rgba(0,0,0,.7);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.7);
 }
 .box_wrap img {
     width: 100%;
@@ -51,16 +55,26 @@ ul {
     right: 5%;
     top: 5%;
     border: 0;
-    background-color: rgba(128,128,128,.3);
+    background-color: rgba(255,255,255,.7);
 }
 #next {
     position: absolute;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     font-size: 2rem;
     right: -60px;
-    top: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: white;
+}
+#prev {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    left: -60px;
+    top: 50%;
     transform: translate(-50%, -50%);
     border: 0;
     background-color: rgba(225,225,225);

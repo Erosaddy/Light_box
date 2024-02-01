@@ -1,10 +1,13 @@
+//내거
 window.addEventListener("DOMContentLoaded", function() {
-    var pics = document.getElementsByClassName(".pic");
-    var lightbox = document.querySelectorAll("#lightbox");
-    var lightboxImage = document.querySelectorAll("#lightboxImage");
-    var closerBt = document.querySelectorAll("#closer");
-    var nextImgBt =  document.querySelectorAll("#next");
-    var lastPicIndex = null;
+    const pics = document.querySelectorAll(".pic");
+    const lightbox = document.querySelectorAll("#lightbox");
+    const lightboxImage = document.querySelectorAll("#lightboxImage");
+    const closerBt = document.querySelectorAll("#closer");
+    const nextImgBt =  document.querySelectorAll("#next");
+    const nextImgBt =  document.querySelectorAll("#prev");
+    const pager =  document.querySelectorAll("#pager");
+    let lastPicIndex = null;
     //클릭시 라이트박스를 보여주는 함수 : showLightbox
     //for loop vs .forEach()
     //DOM 요소마다 이벤트 반복 추가
@@ -31,6 +34,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
     nextImgBt.onclick = function() {
-        
+        lastPicIndex++;
+        if(lastPicIndex >= 5) { lastPicIndex = 0; }
     }
 });
